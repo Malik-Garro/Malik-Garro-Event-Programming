@@ -1,0 +1,18 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.io.PrintStream;
+import java.util.Observable;
+import java.util.Observer;
+
+public class LegacyDisplay implements Observer {
+   public LegacyDisplay() {
+   }
+
+   public void update(Observable var1, Object var2) {
+      if (var1 instanceof LegacyWeatherData var3) {
+         PrintStream var10000 = System.out;
+         float var10001 = var3.getTemperature();
+         var10000.println("Legacy Display -> Temp: " + var10001 + "°C, Humidity: " + var3.getHumidity() + "%");
+      }
+
+   }
+}
